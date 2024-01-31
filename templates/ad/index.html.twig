@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos annonces!{% endblock %}
+
+{% block body %}
+ 
+<div class="container ">
+    <h1 class="my-3 ">Voici  les annonces de nos hôtes !</h1>
+
+    
+    <div class="row ml-3">
+
+    {% for ad in ads %}
+        <div class="col-md-3">
+            <div class="card bg-light mb-3">
+                <div class="card-header text-center">
+                    {{ad.rooms }} chambres, <strong>{{ad.price}}&euro; / nuit</strong><br>
+                    <small>Pas ecore noté !</small>
+                </div>
+                    <img src="{{ad.coverImage}}" alt="HautStanding" sytle="height:200px; width: 100%; display: block">
+
+                        <div class="card-body">
+                            <h4 class="card-title">
+                               {{ ad.title }}
+                            </h4>
+                            <p class="card-text">
+                               {{ad.introduction }}
+                            </p>
+
+                            <a href="" class="btn btn-primary">
+                                Voir plus !
+                            </a>
+                        </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+    
+    <div class="row">
+        <div class="col">
+            <div class="card border-secondary mb-3">
+                <div class="card-body">
+                    <h4 class="card-title">Nano Bolide</h4>
+                    <hr>
+
+                    <div class="card-text">
+                        <img src="http://placehold.it/64x64" alt="avatar" class="float-left mr-3">
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, 
+                            error voluptatibus. Error quos cumque dignissimos voluptatibus molestiae harum dolor consequatur!</p>
+                            <a href="" class="btn btn-success float-right">Voir plus !</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

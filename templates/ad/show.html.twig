@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ad.title}}
+{% endblock %}
+
+{% block body %}
+
+    <div class="ad-title" style="background-image: url('{{ asset('image/xbox.jpg') }}')">
+        <div class="container">
+            <h1>{{ad.title}}</h1>
+            <p>{{ ad.introduction}}</p>
+            <p class="h2">
+                <strong>{{ad.rooms}} chambres</strong> {{ad.price}}&euro;
+            </strong> par nuit 
+            </p>
+            <a href="#" class="btn btn-primary">Réserver !</a>
+        </div>
+    </div>
+
+
+    <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="card bg-light mb">
+                        <div class="card-header text-center">
+                            {{ad.rooms }} chambres, <strong>{{ad.price}}&euro; / nuit</strong><br>
+                            <small>Pas ecore noté !</small>
+                        </div>
+                            <img src="{{ad.coverImage}}" alt="HautStanding" sytle="height:200px; width: 100%; display: block;">
+        
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                       {{ ad.title }}
+                                    </h4>
+                                    <p class="card-text">
+                                       {{ad.introduction }}
+                                    </p>
+        
+                                    <a href="" class="btn btn-primary">
+                                        Voir plus !
+                                    </a>
+                                </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+{% endblock %}

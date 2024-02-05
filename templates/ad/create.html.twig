@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+     Formulaire !
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+
+    <h3>Formulaire</h3>
+    
+    {{form_start(form)}}
+
+            {{form_widget(form)}}
+                <button type="submit" class="btn btn-primary">Submit</button>
+        {{form_end(form)}}
+</div>
+
+
+
+{% endblock %}

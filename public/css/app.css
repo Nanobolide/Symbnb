@@ -1,0 +1,11 @@
+div.ad-title {
+    padding: 2%;
+    background-size: cover;
+    background-position: center center;
+}
+div.ad-title h1, div.ad-title p {
+    color: rgb(170, 52, 52) ;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    
+
+}
